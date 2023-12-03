@@ -10,5 +10,10 @@ ShellScripting
 1. import the environment variable in shell
    export username="saranyakavins"
    export token="<<PAT token>>"
+2. Install jq
+   sudo apt install jq -y
+3. execute script
+   ./list-users.sh saranyakavins ShellScripting
+
 
 
