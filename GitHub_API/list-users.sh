@@ -16,7 +16,7 @@
 #################################################
 
 # call helper function
-Helper()
+helper
 
 # GitHub API Url
 api_url="https://api.github.com"
@@ -26,7 +26,7 @@ api_url="https://api.github.com"
 username=$username
 token=$token
 
-# GitHub User and Repository details
+# GitHub User and Repository details passed as command line arguments
  repo_owner=$1
  repo_name=$2
 
@@ -62,7 +62,7 @@ fi
 # helper function to specify the cmd args
 function helper {
 expectedCmdArgs=2
-if [ $# -ne 2 ]; then
+if [ $# -ne $expectedCmdArgs ]; then
 echo "Execute the script with required cmd args"
 fi
 }
