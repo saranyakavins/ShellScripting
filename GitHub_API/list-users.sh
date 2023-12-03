@@ -15,6 +15,9 @@
 #  https://api.github.com/repos/OWNER/REPO/collaborators
 #################################################
 
+# call helper function
+Helper()
+
 # GitHub API Url
 api_url="https://api.github.com"
 
@@ -53,6 +56,14 @@ echo "No users found with read access for ${repo_owner}/${repo_name}"
 else
 echo "Users with read access to ${repo_owner}/${repo_name}:"
 echo "$collabotorators"
+fi
+}
+
+# helper function to specify the cmd args
+function helper {
+expectedCmdArgs=2
+if [ $# -ne 2 ]; then
+echo "Execute the script with required cmd args"
 fi
 }
 
